@@ -25,11 +25,11 @@ while human.life_points > 0 && (player2.life_points > 0 || player3.life_points >
 	puts" attaquer un joueur en vue :" 
 
 	if player2.life_points > 0 
-	puts "0 - #{player2.name} a #{player2.life_points} points de vie"
+		puts "0 - #{player2.name} a #{player2.life_points} points de vie"
 	end
 
 	if player3.life_points > 0
-	puts "1 - #{player3.name} a #{player3.life_points} points de vie"
+		puts "1 - #{player3.name} a #{player3.life_points} points de vie"
 	end
 
 	print ">"
@@ -66,14 +66,16 @@ while human.life_points > 0 && (player2.life_points > 0 || player3.life_points >
 	
 	puts"Les autres joueurs attaquent"
 	enemies.each do |enemy|
-	if enemy.life_points > 0
-	enemy.attacks(human)
-	end
+		if enemy.life_points > 0
+			enemy.attacks(human)
+		end
 	end
 
 
 end
+
 puts "La partie est finie"
+
 if human.life_points > 0
 	puts "Bravo ! Tu as gagné !!"
 else
